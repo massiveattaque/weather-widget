@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
   	<title>Weather</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   	<link rel="stylesheet" href="style.css">
+  
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-39WWGPP5QV"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'G-39WWGPP5QV');
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-39WWGPP5QV');
 	</script>
 </head>
 <body>
-	<a id="weather" class="weatherwidget-io inactiveLink" href="https://forecast7.com/en/n23d55n46d63/sao-paulo/" data-label_1="SÃO PAULO" data-icons="Climacons Animated" data-mode="Current"></a>
-	<a id="logo" href="https://github.com/anthonytedja" onclick="event.stopPropagation()"><i class="fa fa-github fa-lg"></i></a>
-	<script  src="script.js"></script>
+	<!-- Widget de previsão do tempo -->
+	<a id="weather" class="weatherwidget-io inactiveLink" 
+	   href="https://forecast7.com/en/n23d55n46d63/sao-paulo/" 
+	   data-label_1="SÃO PAULO" 
+	   data-icons="Climacons Animated" 
+	   data-mode="Current">
+	</a>
+
+	<!-- Link para o GitHub com ícone do FontAwesome -->
+	<a id="logo" href="https://github.com/massiveattaque" onclick="event.stopPropagation()">
+		<i class="fa fa-github fa-lg"></i>
+	</a>
+
+	<!-- Script para mudança de tema e funcionalidades -->
+	<script src="script.js"></script>
 </body>
 </html>
