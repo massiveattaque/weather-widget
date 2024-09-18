@@ -12,9 +12,9 @@ function light() {
     document.documentElement.setAttribute('data-theme', 'pure');
     document.getElementById('weather').setAttribute('data-theme', 'pure');
     document.getElementById('weather').removeAttribute('data-basecolor');
-    document.getElementById('weather').setAttribute('data-textcolor', '#37352f');
+    document.getElementById('weather').setAttribute('data-textcolor', '#ff0202');
     document.getElementById('weather').removeAttribute('data-cloudfill');
-    document.getElementById('weather').setAttribute('data-suncolor', '#F58f70');
+    document.getElementById('weather').setAttribute('data-suncolor', '#ff0202');
     script(document, 'script', 'weatherwidget-io-js');
 }
 
