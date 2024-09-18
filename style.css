@@ -1,13 +1,7 @@
 :root {
     --main-bg-color: #fff;
-    --text-color: #37352f; /* Cor padrão para o tema claro */
-    --accent-color: #f58f70; /* Cor de destaque, que pode ser usada para links, botões etc. */
-}
-
-[data-theme="gray"] {
-    --main-bg-color: #191919;
-    --text-color: #f58f70; /* Cor do texto no tema escuro */
-    --accent-color: #f58f70; /* Mantém o mesmo destaque no tema escuro */
+    --text-color: #000000; /* Cor padrão para o texto no tema claro */
+    --accent-color: #ff0202; /* Cor de destaque */
 }
 
 * {
@@ -16,6 +10,7 @@
 }
 
 body {
+    font-family: 'Karla', sans-serif;
     margin: 0;
     background-color: var(--main-bg-color);
     overflow: hidden;
@@ -27,6 +22,7 @@ body {
 }
 
 #logo {
+    font-family: 'Karla', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +31,7 @@ body {
     position: relative;
     margin-top: 100px;
     text-align: center;
-    color: var(--accent-color); /* Usa a cor de destaque definida para o tema */
+    color: var(--accent-color); /* Usa a cor de destaque definida */
 }
 
 #logo:hover {
