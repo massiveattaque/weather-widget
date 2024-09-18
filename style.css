@@ -1,16 +1,15 @@
 :root {
     --main-bg-color: #fff;
     --text-color: #000000; /* Cor padrão para o texto no tema claro */
-    --accent-color: #ff0202; /* Cor de destaque */
+    --accent-color: #373737; /* Cor de destaque */
 }
 
 * {
     transition: all ease 0.2s;
-    color: var(--text-color);
 }
 
 body {
-    font-family: 'Karla', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     margin: 0;
     background-color: var(--main-bg-color);
     overflow: hidden;
@@ -22,7 +21,7 @@ body {
 }
 
 #logo {
-    font-family: 'Karla', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +36,16 @@ body {
 #logo:hover {
     opacity: 0.3;
     transform: scale(1.1);
+}
+
+/* Estilos específicos para o widget de previsão do tempo */
+.weatherwidget-io {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-color);
+}
+
+.weatherwidget-io[data-label_1]::before {
+    font-weight: bold;
 }
 
 @media screen and (max-width: 750px) {
