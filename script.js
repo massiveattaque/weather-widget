@@ -18,7 +18,7 @@ function light() {
     script(document, 'script', 'weatherwidget-io-js');
 }
 
-// Função para tema escuro
+// Função para tema escuro (caso queira permitir)
 function dark() {
     document.documentElement.setAttribute('data-theme', 'gray');
     document.getElementById('weather').setAttribute('data-theme', 'gray');
@@ -29,14 +29,10 @@ function dark() {
     script(document, 'script', 'weatherwidget-io-js');
 }
 
-// Verifica se o sistema prefere tema escuro ou claro
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    dark();
-} else {
-    light();
-}
+// Carregar o tema claro por padrão
+light();
 
-// Atualiza o tema automaticamente quando a preferência do sistema mudar
+// Opcional: Atualizar tema ao mudar a preferência do sistema (se você quiser manter isso)
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
     if (event.matches) {
         dark();
@@ -45,27 +41,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (ev
     }
 });
 
-// Opcional: Lembrar da escolha do usuário usando localStorage
+// Se você usar armazenamento local, pode controlar o tema com base nas preferências salvas
 let savedTheme = localStorage.getItem('data-theme');
 if (savedTheme) {
     if (savedTheme === 'pure') {
-        light();
-    } else {
-        dark();
-    }
-} else {
-    // Se não houver tema salvo, segue a preferência do sistema
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        dark();
-    } else {
-        light();
-    }
-}
-
-// Função para salvar a escolha do usuário no armazenamento local
-function setUserTheme(theme) {
-    localStorage.setItem('data-theme', theme);
-    if (theme === 'pure') {
         light();
     } else {
         dark();
