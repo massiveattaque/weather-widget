@@ -7,7 +7,7 @@ function script(d, s, id) {
     fjs.parentNode.insertBefore(js, fjs);
 }
 
-// Função para aplicar o tema claro
+// função que aplica o tema claro
 function light() {
     document.documentElement.setAttribute('data-theme', 'pure');
     document.getElementById('weather').setAttribute('data-theme', 'pure');
@@ -18,5 +18,5 @@ function light() {
     script(document, 'script', 'weatherwidget-io-js');
 }
 
-// Carrega o tema claro por padrão ao abrir a página
+// carrega o tema claro por padrão ao abrir a página
 light();
