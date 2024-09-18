@@ -1,7 +1,7 @@
 :root {
     --main-bg-color: #fff;
     --text-color: #000000; /* Cor padrão para o texto no tema claro */
-    --accent-color: #000000; /* Cor de destaque */
+    --accent-color: #ff0000; /* Cor de destaque */
 }
 
 * {
